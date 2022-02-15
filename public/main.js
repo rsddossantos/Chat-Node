@@ -20,6 +20,18 @@ function renderUserList() {
     });
 }
 
+function addMessage(type, user, msg) {
+    let ul = document.querySelector('.chatlist');
+
+    switch(type) {
+        case 'status':
+            ul.innerHTML += '<li class="m-status">'+msg+'</li>';
+            break;
+        case 'msg':
+            ul.innerHTML += '<li class="m-txt"><span>'+user+'</span>'+msg+'</li>';
+    }
+}
+
 loginInput.addEventListener('keyup', (e) => {
     if(e.keyCode === 13) {
         let name = loginInput.value.trim();
@@ -35,6 +47,32 @@ socket.on('user-ok', (list) => {
     loginPage.style.display = 'none';
     chatPage.style.display = 'flex';
     textInput.focus();
+    addMessage('status', null, 'Conectado!');
     userList = list;
     renderUserList();
 });
+
+socket.on('list-update', (data) => {
+    if(data.joined) {
+        addMessage('status', null, data.joined+' entrou no chat.');
+    }
+    if(data.left) {
+        addMessage('status', null, data.left+' saiu do chat.');
+    }
+
+    userList = data.list;
+    renderUserList();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
