@@ -14,3 +14,4 @@ Em uma desconexão o sistema ficará tentando reestabelecer e irá aproveitar a 
   <code>http://localhost:3000</code>
   <br><br>
   
+![TinyTake01-02-2022-05-31-12](https://user-images.githubusercontent.com/61060100/154350976-3349cf91-a562-455c-85ad-16f5c112450c.png)
