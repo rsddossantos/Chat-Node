@@ -1,6 +1,7 @@
 # <p align="center"> Chat Node</p>
 
-Chat simples com NodeJs e biblioteca socket.ui. Abra diversas conexões e inicie o bate-papo.
+Chat simples com NodeJs e biblioteca socket.io. 
+Abra diversas conexões e inicie o bate-papo.
 Em uma desconexão o sistema ficará tentando reestabelecer e irá aproveitar a mesma conexão após reconectar.
 <hr>
 
