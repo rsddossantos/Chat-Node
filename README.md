@@ -9,7 +9,7 @@ Em uma desconexão o sistema ficará tentando reestabelecer e irá aproveitar a 
 - Atualizar as dependências:<br><br>
   <code>npm install</code>
   <br><br>
-- Acessar o sistema na porta 3000
+- Acessar o sistema na porta 3000:<br><br>
   <code>http://localhost:3000</code>
   <br><br>
   
